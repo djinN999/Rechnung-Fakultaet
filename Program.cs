@@ -37,13 +37,15 @@ namespace rechnungfakultaet
 
             Console.Write("Berechnung: {0}", i);
 
-            int fakultaet = i; 
+            Ulong fakultaet;
+            fakultaet = Convert.ToUInt64(i);
+            
             int original = i; 
            
             while (i > 1)
             {
                 Console.Write(" * {0}", --i); 
-                fakultaet *= i;
+                fakultaet *= Convert.ToUInt64(i);
             }
             Console.WriteLine("");
             Console.WriteLine("Die Fakultät von {0} lautet {1}.", original, fakultaet);
